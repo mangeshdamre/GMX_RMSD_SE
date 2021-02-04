@@ -47,12 +47,9 @@ parser.add_argument("-o",
                     help="Name of output file name (output.png)")
 args = parser.parse_args()
 ############################################################
-#inp_nameGlob = "rmsd-md-Spas_6PEN-global-add1-every50ps.xvg"
 inp_nameGlob = args.f1
-#inp_nameGlobAvg = "rmsd-md-Spas_6PEN-global-average-every50ps.xvg"
 
 inp_data = np.loadtxt(inp_nameGlob, comments=['#', '@', '&'])[0:]
-#inp_dataAvg = np.loadtxt(inp_nameGlobAvg, comments=['#', '@', '&'])[0:]
 
 time = inp_data[:, 0]
 trajOne = inp_data[:, 1] * 10
@@ -62,13 +59,10 @@ trajFour = inp_data[:, 7] * 10
 trajFive = inp_data[:, 9] * 10
 
 globAvg = (trajOne + trajTwo + trajThree + trajFour + trajFive) / 5
-#globAvg = inp_dataAvg[:, 1] * 10
-
 
 def movingaverage(interval, window_size):
     window = np.ones(int(window_size)) / float(window_size)
     return np.convolve(interval, window, 'same')
-
 
 ############### Global setting ##############
 SMALL_SIZE = 8
@@ -83,7 +77,6 @@ plt.rc('axes', labelsize=MEDIUM_SIZE,
 plt.rc('xtick', labelsize=SMALL_SIZE)  # fontsize of the tick labels
 plt.rc('ytick', labelsize=SMALL_SIZE)  # fontsize of the tick labels
 plt.rc('legend', fontsize=SMALL_SIZE)  # legend fontsize
-#plt.rc('figure', titlesize=BIGGER_SIZE, titleweight=900)  # fontsize of the figure title
 plt.rcParams['figure.figsize'] = [7, 4.0]  #Figure size
 ###############################################
 xmin = args.x
@@ -107,7 +100,6 @@ plt.ylabel('RMSD (\305)')
 plt.xticks(x_ticks)
 plt.yticks(y_ticks)
 
-#plt.plot(time, trajOne, marker='', linewidth=1, color="blue", alpha=alpha1)
 time_av = movingaverage(time, 10)
 y_av = movingaverage(trajOne, 10)
 plt.plot(time_av[0:-4],
@@ -117,7 +109,6 @@ plt.plot(time_av[0:-4],
          linewidth=2,
          alpha=alpha2)
 
-#plt.plot(time, trajTwo, marker='', linewidth=1, color="green", alpha=alpha1)
 y_av = movingaverage(trajTwo, 10)
 plt.plot(time_av[0:-4],
          y_av[:-4],
@@ -126,7 +117,6 @@ plt.plot(time_av[0:-4],
          linewidth=2,
          alpha=alpha2)
 
-#plt.plot(time, trajThree, marker='', linewidth=1, color="orange", alpha=alpha1)
 y_av = movingaverage(trajThree, 10)
 plt.plot(time_av[0:-4],
          y_av[:-4],
@@ -135,7 +125,6 @@ plt.plot(time_av[0:-4],
          linewidth=2,
          alpha=alpha2)
 
-#plt.plot(time, trajFour, marker='', linewidth=1, color="purple", alpha=alpha1)
 y_av = movingaverage(trajFour, 10)
 plt.plot(time_av[0:-4],
          y_av[:-4],
@@ -144,7 +133,6 @@ plt.plot(time_av[0:-4],
          linewidth=2,
          alpha=alpha2)
 
-#plt.plot(time, trajFive, marker='', linewidth=1, color="yellow", alpha=alpha1)
 y_av = movingaverage(trajFive, 10)
 plt.plot(time_av[0:-4],
          y_av[:-4],
@@ -168,8 +156,6 @@ plt.errorbar(time_av[0:-4],
              label="RMSD-SE",
              alpha=alpha3)
 
-#plt.plot(time, globAvg, marker='', linewidth=1, color="k", alpha=alpha1)
-
 plt.plot(time_av[0:-4],
          y_av[:-4],
          label="Avg",
@@ -179,5 +165,4 @@ plt.plot(time_av[0:-4],
 
 plt.legend(frameon=False, loc=0)
 #plt.show()
-#plt.savefig('6PEN-APO.png')
 plt.savefig(args.o)
