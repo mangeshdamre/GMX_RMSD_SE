@@ -72,5 +72,17 @@ echo 4 4 | gmx rms -s $tpr -f $xtc -o $output -tu ns -n $index
 **Std. Error.**
 Now assume having multiple RMSD files from multiple trajectories. Lets consider `(n=5)`. \
 The standard error (SE) of a statistic is the approximate standard deviation (SD = **σ**) of a statistical sample population `(n=5)`. The standard error is a statistical term that measures the accuracy with which a sample distribution represents a population by using standard deviation. In statistics, a sample mean deviates from the actual mean of a population (**μ**); this deviation is the standard error of the mean. SE is defined as:
-<img src="https://render.githubusercontent.com/render/math?math={SD}={\sigma}=\sqrt{ \frac{1}{n} \sum_{i=1}^{n} \(x_i-\mu))^2 }"> 
+<img src="https://render.githubusercontent.com/render/math?math={SD}={\sigma}=\sqrt{ \frac{1}{n} \sum_{i=1}^{n} \(x_i-\mu)^2 }"> \
+
+**How to plot RMSD and SE?**
+Now we have basic idea of RMSD and SE. Lets plot them in the graph using Python script.
+Assume we have RMSD data file for 5 trajectories which looks like:
+```
+   0.0000000    0.0520567	   0.0000000    0.0501020	   0.0000000    0.0536470	   0.0000000    0.0520567	   0.0000000    0.0520567
+   0.0500000    0.1738762	   0.0500000    0.1738991	   0.0500000    0.1656937	   0.0500000    0.1767206	   0.0500000    0.1733002
+   0.1000000    0.2030493	   0.1000000    0.1959478	   0.1000000    0.1833290	   0.1000000    0.2079110	   0.1000000    0.1898366
+   0.1500000    0.2113873	   0.1500000    0.2260462	   0.1500000    0.2141280	   0.1500000    0.2258700	   0.1500000    0.2134524
+   0.2000000    0.2206186	   0.2000000    0.2318131	   0.2000000    0.2211261	   0.2000000    0.2396275	   0.2000000    0.2169894
+   ... ... ... ...
+```
 
