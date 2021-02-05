@@ -59,3 +59,13 @@ Group    15 (            Ion) has    42 elements
 Group    16 (             NA) has    42 elements
 Group    17 ( Water_and_ions) has 402108 elements
 ```
+Following is the quick bash script to calculate the RMSD:
+```sh
+#!/bin/sh
+tpr=abc.tpr
+xtc=abc.xtc
+output=abc.xvg
+index=index.ndx
+
+gmx rms -s $tpr -f $xtc -o $output -tu ns -n $index
+```
