@@ -7,7 +7,6 @@ import math
 import string
 import sys
 import argparse
-from tabulate import tabulate
 ############################################################
 parser = argparse.ArgumentParser(
     description='Plot Average RMSD with Std. Error!')
@@ -48,7 +47,6 @@ parser.add_argument("-o",
 args = parser.parse_args()
 ############################################################
 inp_nameGlob = args.f1
-
 inp_data = np.loadtxt(inp_nameGlob, comments=['#', '@', '&'])[0:]
 
 time = inp_data[:, 0]
@@ -142,11 +140,9 @@ plt.plot(time_av[0:-4],
          alpha=alpha2)
 
 rmsd_std = np.std([trajOne, trajTwo, trajThree, trajFour, trajFive], axis=0)
-#rmsd_std = np.std(globAvg, axis=0)
 rmsd_err = rmsd_std / np.sqrt(5)
 print(rmsd_err)
 rmsd_err_av = movingaverage(rmsd_err, 10)
-#rmsd_err = rmsd_std/np.sqrt(1)
 y_av = movingaverage(globAvg, 10)
 plt.errorbar(time_av[0:-4],
              y_av[:-4],
@@ -164,5 +160,4 @@ plt.plot(time_av[0:-4],
          alpha=alpha1)
 
 plt.legend(frameon=False, loc=0)
-#plt.show()
 plt.savefig(args.o)
