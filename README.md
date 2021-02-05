@@ -100,9 +100,9 @@ import sys
 import argparse
 ```
 **How to use rmsd_SE.py?**
-```sh
+```py
 ./rmsd_SE.py -h
-usage: rmsd_SE_Avg_5traj.py [-h] [-x X] -X X [-y Y] -Y Y -f1 F1 -t T -o O
+usage: rmsd_SE.py [-h] [-x X] -X X [-y Y] -Y Y -f1 F1 -t T -o O
 
 Plot Average RMSD with Std. Error!
 
