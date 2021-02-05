@@ -99,4 +99,20 @@ import string
 import sys
 import argparse
 ```
+***how to use rmsd_SE.py?**
+```sh
+./rmsd_SE.py -h
+usage: rmsd_SE_Avg_5traj.py [-h] [-x X] -X X [-y Y] -Y Y -f1 F1 -t T -o O
 
+Plot Average RMSD with Std. Error!
+
+optional arguments:
+  -h, --help       show this help message and exit
+  -x X, --x X      This is the 'xmin' variable : default = 0
+  -X X, --X X      This is the 'xmax' variable : default = 25
+  -y Y, --y Y      This is the 'ymin' variable : default = 0
+  -Y Y, --Y Y      This is the 'Ymax' variable : default = 10
+  -f1 F1, --f1 F1  Input RMSD data file name for multiple trajectory data.
+  -t T, --t T      Graph Title
+  -o O, --o O      Name of output file name (output.png)
+```
