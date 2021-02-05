@@ -67,5 +67,5 @@ xtc=abc.xtc
 output=abc.xvg
 index=index.ndx
 
-gmx rms -s $tpr -f $xtc -o $output -tu ns -n $index
+echo 4 4 | gmx rms -s $tpr -f $xtc -o $output -tu ns -n $index
 ```
