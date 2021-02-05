@@ -10,3 +10,6 @@ where __*N<sub>atoms</sub>*__ is the number of atoms whose positions are being c
 
 **How to calculate RMSD using GROMACS?** \
 `gmx rms -h` will guide through the usage of the command with elaborate description.
+```sh
+gmx rms -s abc.tpr -f abc.xtc -o abc.xvg -tu ns -n index.ndx
+```
