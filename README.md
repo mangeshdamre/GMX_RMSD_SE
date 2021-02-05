@@ -118,5 +118,7 @@ optional arguments:
   -t T, --t T      Graph Title
   -o O, --o O      Name of output file name (output.png)
 ```
+
 ##Output plot
+
 ![alt text](https://github.com/mangeshdamre/GMX_RMSD_SE_PLOT/blob/main/demo/output.png?raw=true)
