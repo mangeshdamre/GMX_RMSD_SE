@@ -35,4 +35,27 @@ Group    15 (            Ion) has    42 elements
 Group    16 (             NA) has    42 elements
 Group    17 ( Water_and_ions) has 402108 elements
 ```
-To calculate RMSD for `Backbone` atoms for every frame we select option `4`.
+To calculate RMSD for `Backbone` atoms for every frame we select a group `4` first to align all the frames in the trajectory with respect to first frame. Later it will ask to make second selection to calculate the RMSD next group (again select group `4`).
+```sh
+Select a group: 4
+Selected 4: 'Backbone'
+Select group for RMSD calculation
+Group     0 (         System) has 420972 elements
+Group     1 (        Protein) has 18864 elements
+Group     2 (      Protein-H) has 14748 elements
+Group     3 (        C-alpha) has  1902 elements
+Group     4 (       Backbone) has  5706 elements
+Group     5 (      MainChain) has  7614 elements
+Group     6 (   MainChain+Cb) has  9396 elements
+Group     7 (    MainChain+H) has  9450 elements
+Group     8 (      SideChain) has  9414 elements
+Group     9 (    SideChain-H) has  7134 elements
+Group    10 (    Prot-Masses) has 18864 elements
+Group    11 (    non-Protein) has 402108 elements
+Group    12 (          Water) has 402066 elements
+Group    13 (            SOL) has 402066 elements
+Group    14 (      non-Water) has 18906 elements
+Group    15 (            Ion) has    42 elements
+Group    16 (             NA) has    42 elements
+Group    17 ( Water_and_ions) has 402108 elements
+```
