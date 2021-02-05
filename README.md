@@ -4,6 +4,4 @@ Use the script to calculate the RMSD of a protein from molecular dynamics simula
 Having multiple simulations of similar setup, it is worth while to look into RMSDs and Std. Error related to it.
 ### RMSD
 **Root Mean Square Deviation.** The Root Mean Squared Deviation (RMSD) is defined as:
-```math
-SE = \frac{\sigma}{\sqrt{n}}
-```
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
