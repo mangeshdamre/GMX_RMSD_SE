@@ -76,7 +76,11 @@ The standard error (SE) of a statistic is the approximate standard deviation (SD
 
 **How to plot RMSD and SE?**
 Now we have basic idea of RMSD and SE. Lets plot them in the graph using Python script.
-Assume we have RMSD data file for 5 trajectories which looks like:
+Assume we have RMSD data file for 5 trajectories. Each RMSD file contains two columns `(time, RMSD)`. Cancatenate all the RMSD data files into one for ease of use.
+```sh
+paste 1.xvg 2.xvg 3.xvg 4.xvg 5.xvg > abc.xvg  # Paste command will concatenate all the columns into single file.
+```
+which looks like:
 ```
    0.0000000    0.0520567	   0.0000000    0.0501020	   0.0000000    0.0536470	   0.0000000    0.0520567	   0.0000000    0.0520567
    0.0500000    0.1738762	   0.0500000    0.1738991	   0.0500000    0.1656937	   0.0500000    0.1767206	   0.0500000    0.1733002
