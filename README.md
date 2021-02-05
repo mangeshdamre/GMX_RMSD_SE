@@ -13,7 +13,7 @@ where __*N<sub>atoms</sub>*__ is the number of atoms whose positions are being c
 ```sh
 gmx rms -s abc.tpr -f abc.xtc -o abc.xvg -tu ns -n index.ndx
 ```
-The above command in terminal will allow you to select an option listed in the `index.ndx` file. For example: \
+The above command in terminal will allow you to select an option listed in the `index.ndx` file. For example:
 ```sh
 Select group for least squares fit
 Group     0 (         System) has 420972 elements
