@@ -69,3 +69,7 @@ index=index.ndx
 
 echo 4 4 | gmx rms -s $tpr -f $xtc -o $output -tu ns -n $index
 ```
+**Std. Error.**
+
+Now assume having multiple RMSD files from multiple trajectories. Lets consider `(n=5)`. \
+The standard error (SE) of a statistic is the approximate standard deviation ('''σ''') of a statistical sample population. The standard error is a statistical term that measures the accuracy with which a sample distribution represents a population by using standard deviation. In statistics, a sample mean deviates from the actual mean of a population; this deviation is the standard error of the mean.
