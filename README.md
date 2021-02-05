@@ -73,13 +73,12 @@ echo 4 4 | gmx rms -s $tpr -f $xtc -o $output -tu ns -n $index
 Now assume having multiple RMSD files from multiple trajectories. Lets consider `(n=5)`. \
 The standard error (SE) of a statistic is the approximate standard deviation (SD = **σ**) of a statistical sample population `(n=5)`. The standard error is a statistical term that measures the accuracy with which a sample distribution represents a population by using standard deviation. In statistics, a sample mean deviates from the actual mean of a population (**μ**); this deviation is the standard error of the mean. SE is defined as:
 <img src="https://render.githubusercontent.com/render/math?math={SD}={\sigma}=\sqrt{ \frac{1}{n} \sum_{i=1}^{n} \(x_i-\mu)^2 }"> \
-Python comes very handy while performing data operations. By importing `numpy` library, SD and SE calculations can be performed. For example, \
+Python comes very handy while performing data operations. By importing `numpy` library, SD and SE calculations can be performed. For example, 
 ```py
 rmsd_std = np.std([trajOne, trajTwo, trajThree, trajFour, trajFive], axis=0)
 rmsd_err = rmsd_std / np.sqrt(5)
 ```
-https://github.com/mangeshdamre/GMX_RMSD_SE_PLOT/blob/238c7f28a668b2f888b4af47e076b2c1ccd0fee5/scripts/rmsd_SE.py#L142-L143
-For more details refer to the **<a href="https://github.com/mangeshdamre/GMX_RMSD_SE_PLOT/blob/main/scripts/rmsd_SE.py" target="_blank">rmsd_SE.py</a>**.
+For more details refer to the **<a href="https://github.com/mangeshdamre/GMX_RMSD_SE_PLOT/blob/main/scripts/rmsd_SE.py" target="_blank">rmsd_SE.py</a>** or https://github.com/mangeshdamre/GMX_RMSD_SE_PLOT/blob/238c7f28a668b2f888b4af47e076b2c1ccd0fee5/scripts/rmsd_SE.py#L142-L143.
 
 **How to plot RMSD and SE?**
 Now we have basic idea of RMSD and SE. Lets plot them in the graph using Python script.
