@@ -85,4 +85,5 @@ Assume we have RMSD data file for 5 trajectories which looks like:
    0.2000000    0.2206186	   0.2000000    0.2318131	   0.2000000    0.2211261	   0.2000000    0.2396275	   0.2000000    0.2169894
    ... ... ... ...
 ```
-
+Columns `1,3,5,7,9` represents time of the simulation in `ns` and columns `2,4,6,8,10` represents RMSD values for 5 trajectories in `nm` (nm = 10^-9 m).
+ 
