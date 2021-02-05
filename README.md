@@ -99,7 +99,7 @@ import string
 import sys
 import argparse
 ```
-***how to use rmsd_SE.py?**
+**how to use rmsd_SE.py?**
 ```sh
 ./rmsd_SE.py -h
 usage: rmsd_SE_Avg_5traj.py [-h] [-x X] -X X [-y Y] -Y Y -f1 F1 -t T -o O
