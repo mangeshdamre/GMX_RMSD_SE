@@ -20,7 +20,7 @@ Group     0 (         System) has 420972 elements
 Group     1 (        Protein) has 18864 elements
 Group     2 (      Protein-H) has 14748 elements
 Group     3 (        C-alpha) has  1902 elements
-Group     4 (       Backbone) has  5706 elements
+Group     **4 (       Backbone) has  5706 elements**
 Group     5 (      MainChain) has  7614 elements
 Group     6 (   MainChain+Cb) has  9396 elements
 Group     7 (    MainChain+H) has  9450 elements
