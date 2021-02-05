@@ -69,7 +69,7 @@ index=index.ndx
 
 echo 4 4 | gmx rms -s $tpr -f $xtc -o $output -tu ns -n $index
 ```
-**Std. Error.**
+##Std. Error.
 Now assume having multiple RMSD files from multiple trajectories. Lets consider `(n=5)`. \
 The standard error (SE) of a statistic is the approximate standard deviation (SD = **σ**) of a statistical sample population `(n=5)`. The standard error is a statistical term that measures the accuracy with which a sample distribution represents a population by using standard deviation. In statistics, a sample mean deviates from the actual mean of a population (**μ**); this deviation is the standard error of the mean. SE is defined as:
 <img src="https://render.githubusercontent.com/render/math?math={SD}={\sigma}=\sqrt{ \frac{1}{n} \sum_{i=1}^{n} \(x_i-\mu)^2 }">
@@ -99,7 +99,7 @@ import string
 import sys
 import argparse
 ```
-**how to use rmsd_SE.py?**
+**How to use rmsd_SE.py?**
 ```sh
 ./rmsd_SE.py -h
 usage: rmsd_SE_Avg_5traj.py [-h] [-x X] -X X [-y Y] -Y Y -f1 F1 -t T -o O
