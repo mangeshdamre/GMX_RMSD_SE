@@ -79,7 +79,7 @@ Python comes very handy while performing data operations. By importing `numpy` l
 rmsd_std = np.std([trajOne, trajTwo, trajThree, trajFour, trajFive], axis=0)
 rmsd_err = rmsd_std / np.sqrt(5)
 ```
-For more details refer to the **<a href="https://github.com/mangeshdamre/GMX_RMSD_SE_PLOT/blob/main/scripts/rmsd_SE.py" target="_blank">rmsd_SE.py</a>** or https://github.com/mangeshdamre/GMX_RMSD_SE_PLOT/blob/238c7f28a668b2f888b4af47e076b2c1ccd0fee5/scripts/rmsd_SE.py#L142-L143.
+For more details refer to the **<a href="https://github.com/mangeshdamre/GMX_RMSD_SE_PLOT/blob/main/scripts/rmsd_SE.py" target="_blank">rmsd_SE.py</a>** or https://github.com/mangeshdamre/GMX_RMSD_SE_PLOT/blob/98cac83ecc949dbfbc4a4e0d8dfd5d202ebd7ad7/scripts/rmsd_SE.py#L52-L62.
 
 **How to plot RMSD and SE?**
 Now we have basic idea of RMSD and SE. Lets plot them in the graph using Python script.
