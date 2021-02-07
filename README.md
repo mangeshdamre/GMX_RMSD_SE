@@ -98,7 +98,7 @@ paste 1.xvg 2.xvg 3.xvg 4.xvg 5.xvg > abc.xvg
 ```
 Columns `1,3,5,7,9` represents time of the simulation in `ns` and columns `2,4,6,8,10` represents RMSD values for 5 trajectories in `nm` `(nm = 10^-9 m)`.
 
-Pyhton is very convinient to do data operations and graphical plotting. Please use the script (**<a href="https://github.com/mangeshdamre/GMX_RMSD_SE_PLOT/blob/main/scripts/rmsd_SE.py" target="_blank">rmsd_SE.py</a>**) for RMSD+SE plotting.To do so, we will import following libraries in python:
+Pyhton is very convinient to do data operations and graphical plotting. To do so, we will import following libraries in python:
 ```py
 #!/usr/bin/env python3.8
 import numpy as np
@@ -110,6 +110,8 @@ import string
 import sys
 import argparse
 ```
+Please use the script (**<a href="https://github.com/mangeshdamre/GMX_RMSD_SE_PLOT/blob/main/scripts/rmsd_SE.py" target="_blank">rmsd_SE.py</a>**) for RMSD+SE plotting.
+
 **How to use rmsd_SE.py?**
 ```sh
 ./rmsd_SE.py -h
