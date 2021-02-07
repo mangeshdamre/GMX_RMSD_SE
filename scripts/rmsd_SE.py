@@ -58,9 +58,13 @@ trajFive = inp_data[:, 9] * 10
 
 globAvg = (trajOne + trajTwo + trajThree + trajFour + trajFive) / 5
 
-def movingaverage(interval, window_size):
+rmsd_std = np.std([trajOne, trajTwo, trajThree, trajFour, trajFive], axis=0)
+rmsd_err = rmsd_std / np.sqrt(5)
+print(rmsd_err)
+
+def movingaverage(data, window_size):
     window = np.ones(int(window_size)) / float(window_size)
-    return np.convolve(interval, window, 'same')
+    return np.convolve(data, window, 'same')
 
 ############### Global setting ##############
 SMALL_SIZE = 8
@@ -139,9 +143,6 @@ plt.plot(time_av[0:-4],
          linewidth=2,
          alpha=alpha2)
 
-rmsd_std = np.std([trajOne, trajTwo, trajThree, trajFour, trajFive], axis=0)
-rmsd_err = rmsd_std / np.sqrt(5)
-print(rmsd_err)
 rmsd_err_av = movingaverage(rmsd_err, 10)
 y_av = movingaverage(globAvg, 10)
 plt.errorbar(time_av[0:-4],
