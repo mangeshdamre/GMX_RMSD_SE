@@ -131,5 +131,5 @@ optional arguments:
 ```
 
 ## Output plot
-`rmsd_SE_5traj -x 0 -X 50 -y 0 -Y 7 -f abc.xvg -o output.png -t 'RMSD + SE plot'`
+`./rmsd_SE.py -x 0 -X 50 -y 0 -Y 7 -f abc.xvg -o output.png -t 'RMSD + SE plot'`
 ![alt text](https://github.com/mangeshdamre/GMX_RMSD_SE_PLOT/blob/main/demo/output.png?raw=true)
